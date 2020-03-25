@@ -90,6 +90,9 @@ export class Map extends React.Component {
       }
     }
     this.loadMap();
+    if (this.props.bounds) {
+      this.map.fitBounds(this.props.bounds);
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {
